@@ -1,0 +1,48 @@
+@import "./themes";
+
+@mixin alert($type, $borderColor, $bgColor, $txtColor) {
+  .#{$type} {
+      border: 2px dotted $borderColor;
+      padding: 1.3rem;
+      border-radius: .8rem;
+      background-color: $bgColor;
+      color: $txtColor;
+      margin-bottom: 1rem;
+  
+      .alert-header {
+        display: flex;
+        justify-content: space-between;
+  
+        .title {
+          display: flex;
+          align-items: center;
+          font-size: 1.1rem;
+  
+          svg {
+            margin-right: 0.6rem;
+          }
+        }
+  
+        .close {
+          cursor: pointer;
+        }
+      }
+  
+      p {
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1.5;
+        a {
+          color: #646cff;
+          font-weight: 600;
+        }
+      }
+    }
+}
+
+@include alert("alert-default", $defaultBorder, $defaultBg, $defaultColor);
+@include alert("alert-info", $infoBorder, $infoBg, $infoColor);
+@include alert("alert-danger", $errorBorder, $errorBg, $errorColor);
+@include alert("alert-success", $successBorder, $successBg, $successColor);
+@include alert("alert-warning", $warningBorder, $warningBg, $warningColor);
