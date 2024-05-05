@@ -5,14 +5,11 @@
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --white-rgb: 255, 255, 255;
   --black-rgb: 0, 0, 0;
-
 }
 
 
 body {
   margin: 2rem;
-  color: rgb(var(--white-rgb));
   background-color: rgb(var(--black-rgb));
 }
